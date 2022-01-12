@@ -1,0 +1,33 @@
+
+<ng-container >
+  
+    <h1 class="text-center">Sopping cart</h1>
+    <p>you have {{countItems}} items in shopping cart</p>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let product of products">
+          <tr >
+            <td>{{product.product.title}}</td>
+            <td>
+             <app-product-quantity [product]="product.product" >
+
+             </app-product-quantity>
+            </td>
+            <td>{{product.product.price}}</td>
+            <td>{{getTotalPriceOfItem(product.quantity,product.product.price)}}</td>
+          </tr>
+        </ng-container>
+          
+        </tbody>
+      </table>
+</ng-container>
+
+

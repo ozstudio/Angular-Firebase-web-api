@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-color: darkgray;
+    padding:40px;
+}
+.row{
+    margin-top: 20px;
+    margin-left: 0px ;
+    margin-right: 0px ;
+}
+tbody .row{
+    margin-top: 0px;
+
+}
+.card{
+    margin-top: 25px;
+    max-width: 400px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    
+    z-index: 10000;
+}
